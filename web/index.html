@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GET提交和POST提交</title>
+</head>
+<body>
+<h1>Post提交</h1>
+    <form action="/AServlet" method="post">
+        账号：<input type="text" name="username"/><br>
+        密码：<input type="password" name="password"/><br>
+        <input type="submit" value="提交"/>
+    </form>
+<h2>_______________________________________________________</h2>
+<h1>Post提交</h1>
+<form action="/AServlet" method="get">
+    账号：<input type="text" name="username"/><br>
+    密码：<input type="password" name="password"/><br>
+    <input type="submit" value="提交"/>
+</form>
+</body>
+</html>
