@@ -9,23 +9,19 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Created by pc on 17-3-5.
+ * Created by pc on 17-3-6.
  */
-@WebServlet(name = "BServlet",urlPatterns = "/BServlet")
-public class BServlet extends HttpServlet {
+@WebServlet(name = "CServlet",urlPatterns = "/CServlet")
+public class CServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        doGet(request,response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        ServletContext scc = this.getServletContext();
-        //查询名字为xxx的属性的值
-        String s = (String) scc.getAttribute("name");
-        response.getWriter().println(s);
-        //修改名字为xxx的属性值
-        scc.setAttribute("name","mahaun");
-        String ss = (String) scc.getAttribute("name");
-        response.getWriter().println("<h3>"+ss+" </h3>");
+        response.setContentType("text/html;charset=utf-8");
+        ServletContext sc = this.getServletContext();
+        sc.removeAttribute("name");
+        response.getWriter().println("删除数据成功");
 
     }
 }
