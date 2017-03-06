@@ -27,7 +27,7 @@ public class StatisticsServlet extends HttpServlet {
             count++;
         }
         response.getWriter().print("<h2>本次页面被访问"+count+"次</h2>");
-        context.setAttribute("count",count);
+        context.setAttribute("count",count) ;
 
 
     }
