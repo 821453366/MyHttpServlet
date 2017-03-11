@@ -11,8 +11,8 @@
     <title>$Title$</title>
   </head>
   <body>
-  <a></a>
-  <form action="/LogionServlet" method="get">
+  <a href="/LogionServlet2?username=马欢&&password=张三">get方式提交数据</a>
+  <form action="/LogionServlet2" method="get">
     <input type="text" name="username"/><br>
     <input type="password" name="password"/><br>
     <input type="submit" value="登录"/>
