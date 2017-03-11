@@ -11,6 +11,11 @@
     <title>$Title$</title>
   </head>
   <body>
+  <form action="/LogionServlet" method="get">
+    <input type="text" name="username"/><br>
+    <input type="password" name="password"/><br>
+    <input type="submit" value="登录"/>
+  </form>
   $END$
   </body>
 </html>
